@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./weixinrecorded/libs/lansongcommon_hx.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/weiXinRecorded/libs/lansongcommon_hx.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

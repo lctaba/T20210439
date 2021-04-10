@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.9.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.softwareinnovation</groupId>
+    <artifactId>mooc</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>softwareinnovation-mooc</name>
+    <description>服务：网课帮</description>
+
+    <modules>
+        <module>mooc-dal</module>
+        <module>mooc-domain</module>
+        <module>mooc-web</module>
+        <module>mooc-core</module>
+        <module>mooc-flow</module>
+        <module>mooc-common</module>
+        <module>mooc-integration</module>
+        <module>mooc-starter</module>
+        <module>mooc-test</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <spring-boot-version>2.1.9.RELEASE</spring-boot-version>
+        <spring-cloud-version>2.1.3.RELEASE</spring-cloud-version>
+        <mybatis-spring-boot-version>1.3.2</mybatis-spring-boot-version>
+        <swagger-version>2.9.2</swagger-version>
+        <testng-version>6.14.3</testng-version>
+        <maria-version>2.4.0</maria-version>
+        <lombok-version>1.18.2</lombok-version>
+        <druid-version>1.1.10</druid-version>
+        <auth-version>0.1.1</auth-version>
+        <mapping-version>1.0.5-ALPHA</mapping-version>
+        <flow-version>0.1.0</flow-version>
+
+        <mooc-common-version>1.0.0</mooc-common-version>
+        <mooc-core-version>1.0.0</mooc-core-version>
+        <mooc-flow-version>1.0.0</mooc-flow-version>
+        <mooc-dal-version>1.0.0</mooc-dal-version>
+        <mooc-domain-version>1.0.0</mooc-domain-version>
+        <mooc-web-version>1.0.0</mooc-web-version>
+        <mooc-integration-version>1.0.0</mooc-integration-version>
+        <mooc-starter-version>1.0.0</mooc-starter-version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>com.softwareinnovation</groupId>
+                <artifactId>mooc-common</artifactId>
+                <version>${mooc-common-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.softwareinnovation</groupId>
+                <artifactId>mooc-core</artifactId>
+                <version>${mooc-core-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.softwareinnovation</groupId>
+                <artifactId>mooc-flow</artifactId>
+                <version>${mooc-flow-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.softwareinnovation</groupId>
+                <artifactId>mooc-dal</artifactId>
+                <version>${mooc-dal-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.softwareinnovation</groupId>
+                <artifactId>mooc-domain</artifactId>
+                <version>${mooc-domain-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.softwareinnovation</groupId>
+                <artifactId>mooc-web</artifactId>
+                <version>${mooc-web-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.softwareinnovation</groupId>
+                <artifactId>mooc-integration</artifactId>
+                <version>${mooc-integration-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.softwareinnovation</groupId>
+                <artifactId>mooc-starter</artifactId>
+                <version>${mooc-starter-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${spring-boot-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+                <version>${spring-cloud-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${spring-cloud-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot-version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${testng-version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.vorburger.mariaDB4j</groupId>
+                <artifactId>mariaDB4j</artifactId>
+                <version>${maria-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cc.eamon.open</groupId>
+                <artifactId>mapping</artifactId>
+                <version>${mapping-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cc.eamon.open</groupId>
+                <artifactId>auth</artifactId>
+                <version>${auth-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cc.eamon.open</groupId>
+                <artifactId>flow-core</artifactId>
+                <version>${flow-version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>releases</name>
+            <url>http://central.horsecoder.com:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>snapshots</name>
+            <url>http://central.horsecoder.com:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>releases</id>
+            <name>releases</name>
+            <url>http://central.horsecoder.com:8081/repository/maven-releases/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+        </repository>
+    </repositories>
+
+</project>

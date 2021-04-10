@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: softwareinnovation-mooc
+  profiles:
+    active: prod
+    #active: dev
+  main:
+    allow-bean-definition-overriding: true
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+
+mybatis:
+  mapper-locations: classpath*:mapper/**/*.xml
+
+logging:
+  level:
+    com.softwareinnovation: debug

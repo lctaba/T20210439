@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bfa98eac-37d6-4794-a095-20a7ac18213b" name="Default Changelist" comment="feat[cyh]:完成了手势识别">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/zhaoshuang.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/libs/CVUnit-release.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/libs/armeabi-v7a/libLanSongdisplay.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/libs/armeabi-v7a/libLanSongffmpeg.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/libs/armeabi-v7a/libLanSongplayer.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/libs/armeabi-v7a/libyuv-sample.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/libs/armeabi-v7a/libyuv.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/libs/com.coloros.ocs.base-release-1.0.4-SNAPSHOT.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/libs/lansongcommon_hx.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/libs/lfasr-sdk-3.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/AI/Audio/AudioToText.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/AI/image/ImageHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/AI/image/ImagePiece.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/AI/image/ImageSplitter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/AI/image/OpencvUnit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/NoFree/AudioPadExecute.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/NoFree/LSOCompressVideo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/NoFree/LSOExtractFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/NoFree/LSOVideoScale.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/NoFree/onExtractFrameCompletedListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/NoFree/onExtractFrameErrorListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/NoFree/onExtractFrameProgressListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/NoFree/onVideoCompressCompletedListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/NoFree/onVideoCompressProgressListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/videoeditor/AudioEditor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/videoeditor/CopyFileFromAssets.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/videoeditor/LanSoEditor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/videoeditor/LanSongFileUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/videoeditor/LanSongLogCollector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/videoeditor/MediaInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/videoeditor/VideoEditor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/videoeditor/VideoLayout.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/videoeditor/VideoLayoutParam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/videoeditor/onVideoEditorEncodeChangedListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/videoeditor/onVideoEditorProgressListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/videoplayer/IMediaDataSource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/videoplayer/MeasureHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/videoplayer/TextureRenderView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/videoplayer/VPlayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/lansosdk/videoplayer/VideoPlayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/libyuv/LibyuvUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/projectUtil/ErrorType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/projectUtil/ErrorVideo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/projectUtil/Project.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/projectUtil/Subtitle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/projectUtil/Video.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/projectUtil/VideoClip.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/activity/BaseActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/activity/CutSizeActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/activity/CutTimeActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/activity/EditVideoActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/activity/RecordedActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/activity/SelectActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/util/CameraHelp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/util/CameraHelp2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/util/MyVideoEditor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/util/RecordUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/util/RxJavaUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/util/Utils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/view/CutView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/view/LineProgressView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/view/RecordView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/view/RecordedButton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/view/ThumbnailView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/view/TouchView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/view/TuyaView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss/weixinrecordeddemo/projectUtil/ProjectUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/drawable/color1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/drawable/color2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/drawable/color3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/drawable/color4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/drawable/color5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/drawable/rotia.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/drawable/seek.9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/drawable/seek_bkg.9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/drawable/seek_thumb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/drawable/seekbar_horizontal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/drawable/video_hint_circle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/drawable/yuanjiao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/layout/activity_cut_size.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/layout/activity_cut_time.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/layout/activity_edit_video.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/layout/activity_recorded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/layout/activity_select.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/layout/dialog_confirm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/layout/dialog_loading.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/color_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/cut_size.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/cut_time.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/edit_delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/expression1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/expression2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/expression3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/expression4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/expression5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/expression6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/expression7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/expression8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/icon_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/pen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/pen_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/speed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/speed_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/text.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/text_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/video_camera.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/video_delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/video_flash_close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/video_flash_open.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/video_next.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/mipmap-xhdpi/video_thumbnail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weiXinRecorded/src/test/java/com/zhaoss/weixinrecordeddemo/BlurTest3.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[FMLDU20306006523]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/sdk">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/weiXinRecorded">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="VideoRuanChuang" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="ProjectId" id="1pynomNsoftdzjDCKnLtQHDh7vm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="android-custom-viewD:/AndroidSDK/sources/android-29/android/view/View.java_SELECTED" value="View" />
+    <property name="android-custom-viewD:/AndroidSDK/sources/android-29/android/view/ViewGroup.java_SELECTED" value="ViewGroup" />
+    <property name="android-custom-viewD:/AndroidSDK/sources/android-29/android/widget/LinearLayout.java_SELECTED" value="LinearLayout" />
+    <property name="android-custom-viewD:/javaproject/android/VideoRuanChuang/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/view/CutView.java_SELECTED" value="CutView" />
+    <property name="android-custom-viewD:/javaproject/android/VideoRuanChuang/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/view/LineProgressView.java_SELECTED" value="LineProgressView" />
+    <property name="android-custom-viewD:/javaproject/android/VideoRuanChuang/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/view/RecordView.java_SELECTED" value="RecordView" />
+    <property name="android-custom-viewD:/javaproject/android/VideoRuanChuang/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/view/ThumbnailView.java_SELECTED" value="ThumbnailView" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/weiXinRecorded/src/main/java/com/zhaoss" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/weiXinRecorded/libs" />
+    <property name="multi-representation-previewD:/AndroidSDK/sources/android-29/android/view/View.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/AndroidSDK/sources/android-29/android/view/ViewGroup.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/AndroidSDK/sources/android-29/android/widget/LinearLayout.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/javaproject/android/VideoRuanChuang/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/view/CutView.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/javaproject/android/VideoRuanChuang/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/view/LineProgressView.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/javaproject/android/VideoRuanChuang/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/view/RecordView.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/javaproject/android/VideoRuanChuang/weiXinRecorded/src/main/java/com/zhaoss/weixinrecorded/view/ThumbnailView.java_selected" value="Custom views" />
+    <property name="project.structure.last.edited" value="Dependencies" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Properties" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\javaproject\android\VideoRuanChuang\weiXinRecorded\libs\armeabi-v7a" />
+      <recent name="D:\javaproject\android\VideoRuanChuang\weiXinRecorded\libs" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="weixinrecordeddemo" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\javaproject\android\VideoRuanChuang\weiXinRecorded\libs" />
+      <recent name="D:\javaproject\android\VideoRuanChuang\app\libs" />
+      <recent name="D:\javaproject\android\VideoRuanChuang\weiXinRecorded\src\main\jniLibs" />
+      <recent name="D:\javaproject\android\VideoRuanChuang\weiXinRecorded\src" />
+      <recent name="D:\javaproject\android\VideoRuanChuang\weiXinRecorded\src\main\java\com" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Android App.app">
+    <configuration name="BlurTest1.isBlur" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VideoRuanChuang.app" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhaoss.weixinrecordeddemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="PACKAGE_NAME" value="com.zhaoss.weixinrecordeddemo" />
+      <option name="MAIN_CLASS_NAME" value="com.zhaoss.weixinrecordeddemo.BlurTest1" />
+      <option name="METHOD_NAME" value="isBlur" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlurTest2.isBlur" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VideoRuanChuang.weixinrecorded" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhaoss.weixinrecordeddemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="PACKAGE_NAME" value="com.zhaoss.weixinrecordeddemo" />
+      <option name="MAIN_CLASS_NAME" value="com.zhaoss.weixinrecordeddemo.BlurTest2" />
+      <option name="METHOD_NAME" value="isBlur" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlurTest3.isBlur" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VideoRuanChuang.weixinrecorded" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhaoss.weixinrecordeddemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="PACKAGE_NAME" value="com.zhaoss.weixinrecordeddemo" />
+      <option name="MAIN_CLASS_NAME" value="com.zhaoss.weixinrecordeddemo.BlurTest3" />
+      <option name="METHOD_NAME" value="isBlur" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlurTest3.isBlur2" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VideoRuanChuang.weixinrecorded" />
+      <shortenClasspath name="CLASSPATH_FILE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhaoss.weixinrecordeddemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="PACKAGE_NAME" value="com.zhaoss.weixinrecordeddemo" />
+      <option name="MAIN_CLASS_NAME" value="com.zhaoss.weixinrecordeddemo.BlurTest3" />
+      <option name="METHOD_NAME" value="isBlur2" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlurTest3.isBlur" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VideoRuanChuang.app" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhaoss.weixinrecordeddemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="PACKAGE_NAME" value="com.zhaoss.weixinrecordeddemo" />
+      <option name="MAIN_CLASS_NAME" value="com.zhaoss.weixinrecordeddemo.BlurTest3" />
+      <option name="METHOD_NAME" value="isBlur" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlurTest.isBlur" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VideoRuanChuang.weixinrecorded" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhaoss.weixinrecordeddemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zhaoss.weixinrecordeddemo" />
+      <option name="MAIN_CLASS_NAME" value="com.zhaoss.weixinrecordeddemo.BlurTest" />
+      <option name="METHOD_NAME" value="isBlur" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-Djava.library.path=D:\\javaproject\\android\\opencv\\opencv-4.3.0-android-sdk\\OpenCV-android-sdk\\sdk\\native\\libs\\armeabi-v7a" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlurTest.isBlur" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VideoRuanChuang.app" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhaoss.weixinrecordeddemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zhaoss.weixinrecordeddemo" />
+      <option name="MAIN_CLASS_NAME" value="com.zhaoss.weixinrecordeddemo.BlurTest" />
+      <option name="METHOD_NAME" value="isBlur" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="--Djava.library.path=D:\\javaproject\\android\\opencv\\opencv-4.3.0-android-sdk\\OpenCV-android-sdk\\sdk\\native\\libs\\armeabi-v7a" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <useClassPathOnly />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="VideoRuanChuang.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="VideoRuanChuang.java" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="isBlur2()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+      <module name="VideoRuanChuang.app" />
+      <option name="TESTING_TYPE" value="3" />
+      <option name="METHOD_NAME" value="isBlur2" />
+      <option name="CLASS_NAME" value="weixinrecordeddemo.BlurTest2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="INCLUDE_GRADLE_EXTRA_OPTIONS" value="true" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Android App.app" />
+      <item itemvalue="Android App.java" />
+      <item itemvalue="Android Instrumented Tests.isBlur2()" />
+      <item itemvalue="Android JUnit.BlurTest2.isBlur" />
+      <item itemvalue="Android JUnit.BlurTest.isBlur" />
+      <item itemvalue="Android JUnit.BlurTest1.isBlur" />
+      <item itemvalue="Android JUnit.BlurTest3.isBlur" />
+      <item itemvalue="Android JUnit.BlurTest3.isBlur2" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Android Instrumented Tests.isBlur2()" />
+        <item itemvalue="Android JUnit.BlurTest3.isBlur2" />
+        <item itemvalue="Android JUnit.BlurTest3.isBlur" />
+        <item itemvalue="Android JUnit.BlurTest3.isBlur" />
+        <item itemvalue="Android JUnit.BlurTest1.isBlur" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bfa98eac-37d6-4794-a095-20a7ac18213b" name="Default Changelist" comment="" />
+      <created>1616164374238</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616164374238</updated>
+    </task>
+    <task id="LOCAL-00001" summary="feat[cyh]:完成了项目类，项目文件的创建、保存与解析。&#10;fix[cyh]:修改了视频与图片的存储路径。但是此处还没有修改完，真正路径还需传入项目名作为参数，因为没有完成项目创建功能所以没有加上。">
+      <created>1616336936156</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1616336936156</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat[cyh]:完成了手势识别">
+      <created>1616987175561</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616987175561</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat[cyh]:完成了手势识别">
+      <created>1616987457250</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616987457250</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat[cyh]:手势识别，语音识别，模糊识别">
+      <created>1617340008213</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1617340008214</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat[cyh]:完成了项目类，项目文件的创建、保存与解析。&#10;fix[cyh]:修改了视频与图片的存储路径。但是此处还没有修改完，真正路径还需传入项目名作为参数，因为没有完成项目创建功能所以没有加上。" />
+    <MESSAGE value="feat[cyh]:完成了手势识别" />
+    <MESSAGE value="feat[cyh]:手势识别，语音识别，模糊识别" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat[cyh]:手势识别，语音识别，模糊识别" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="347" y="0" key="#&lt;template&gt;_of_Android_JUnit" timestamp="1617032336696">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="347" y="0" key="#&lt;template&gt;_of_Android_JUnit/0.0.1536.824@0.0.1536.824" timestamp="1617032336696" />
+    <state x="347" y="28" key="#BlurTest.isBlur" timestamp="1617032366731">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="347" y="28" key="#BlurTest.isBlur/0.0.1536.824@0.0.1536.824" timestamp="1617032366731" />
+    <state x="347" y="28" key="#BlurTest.isBlur_(1)" timestamp="1617032192731">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="347" y="28" key="#BlurTest.isBlur_(1)/0.0.1536.824@0.0.1536.824" timestamp="1617032192731" />
+    <state x="209" y="211" width="1182" height="507" key="#PSD" timestamp="1617512165688">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="211" width="1182" height="507" key="#PSD/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1617512165688" />
+    <state x="114" y="170" key="#PSD/0.0.1536.824@0.0.1536.824" timestamp="1617014632715" />
+    <state x="354" y="106" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617033314187">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="354" y="106" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1617033314187" />
+    <state x="485" y="213" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617012797463">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="485" y="213" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1617012797463" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1617091692488">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1616868875571" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1617091692488" />
+    <state x="298" y="335" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1617331900325">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="298" y="335" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1617331900325" />
+    <state x="362" y="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1617331904169">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="362" y="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1617331904169" />
+    <state x="77" y="229" width="1176" height="595" key="#xdebugger.evaluate" timestamp="1616991840054">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="416" y="203" width="946" height="595" key="#xdebugger.evaluate/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1616932949012" />
+    <state x="77" y="229" width="1176" height="595" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1616991840054" />
+    <state x="511" y="269" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1617116833530">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="511" y="269" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1617116833530" />
+    <state x="487" y="158" key="AndroidProcessChooserDialog" timestamp="1616868588401">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="487" y="158" key="AndroidProcessChooserDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1616868588401" />
+    <state width="409" height="466" key="DebuggerActiveHint" timestamp="1616835914028">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="409" height="466" key="DebuggerActiveHint/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1616835914028" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1616988088814">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1616868195391" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1616988088814" />
+    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1617014762366">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1616867978254" />
+    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1617014762366" />
+    <state width="1493" height="304" key="GridCell.Tab.0.bottom" timestamp="1617510368276">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="304" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1617510368276" />
+    <state width="1492" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1617119212259" />
+    <state width="1492" height="142" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617366360397" />
+    <state width="1493" height="304" key="GridCell.Tab.0.center" timestamp="1617510368276">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="304" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1617510368276" />
+    <state width="1492" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1617119212259" />
+    <state width="1492" height="142" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617366360397" />
+    <state width="1493" height="304" key="GridCell.Tab.0.left" timestamp="1617510368276">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="304" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1617510368276" />
+    <state width="1492" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1617119212259" />
+    <state width="1492" height="142" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617366360397" />
+    <state width="1493" height="304" key="GridCell.Tab.0.right" timestamp="1617510368276">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="304" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1617510368276" />
+    <state width="1492" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1617119212259" />
+    <state width="1492" height="142" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1617366360397" />
+    <state width="1493" height="179" key="GridCell.Tab.1.bottom" timestamp="1617510347927">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="179" key="GridCell.Tab.1.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1617510347927" />
+    <state width="1492" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1617119212259" />
+    <state width="1492" height="142" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617366360397" />
+    <state width="1493" height="179" key="GridCell.Tab.1.center" timestamp="1617510347926">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="179" key="GridCell.Tab.1.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1617510347926" />
+    <state width="1492" height="210" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1617119212259" />
+    <state width="1492" height="142" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1617366360397" />
+    <state width="1493" height="179" key="GridCell.Tab.1.left" timestamp="1617510347926">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="179" key="GridCell.Tab.1.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1617510347926" />
+    <state width="1492" height="210" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1617119212259" />
+    <state width="1492" height="142" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1617366360397" />
+    <state width="1493" height="179" key="GridCell.Tab.1.right" timestamp="1617510347926">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="179" key="GridCell.Tab.1.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1617510347926" />
+    <state width="1492" height="210" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1617119212259" />
+    <state width="1492" height="142" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1617366360397" />
+    <state x="147" y="65" key="MergeDialog" timestamp="1616987542607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1616987542607" />
+    <state x="403" y="173" key="MultipleFileMergeDialog" timestamp="1616987542639">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="403" y="173" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1616987542639" />
+    <state x="540" y="114" key="SettingsEditor" timestamp="1617011433906">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="57" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1616935281231" />
+    <state x="540" y="114" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1617011433906" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1616336981831">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1616336981831" />
+    <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1616989921654">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1616932984424" />
+    <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1616989921654" />
+    <state x="565" y="190" key="chooseDestDirectoryDialog" timestamp="1617332062646">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="565" y="190" key="chooseDestDirectoryDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1617332062646" />
+    <state x="86" y="99" width="1350" height="633" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1617512315568">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="86" y="99" width="1350" height="633" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1617512315568" />
+    <state x="159" y="98" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1616987235398" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1616987235398">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1616987235398" />
+    <state x="563" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1616987475863">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="563" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1616165921806" />
+    <state x="563" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1616987475863" />
+    <state x="828" y="208" key="extract.method.dialog" timestamp="1617091743714">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="828" y="208" key="extract.method.dialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1616336364238" />
+    <state x="828" y="208" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1617091743714" />
+    <state x="308" y="66" key="psd.add.module.dependency.panel.dimension" timestamp="1617010181975">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="308" y="66" key="psd.add.module.dependency.panel.dimension/0.0.1536.824@0.0.1536.824" timestamp="1617010181975" />
+    <state x="425" y="187" width="672" height="678" key="run.anything.popup" timestamp="1617013311910">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="-1389" y="236" width="840" height="855" key="run.anything.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1616596884200" />
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1616166148097" />
+    <state x="425" y="187" width="672" height="678" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1617013311910" />
+    <state x="419" y="221" width="897" height="670" key="search.everywhere.popup" timestamp="1617117046036">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="419" y="221" width="897" height="670" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1617117046036" />
+    <state x="572" y="106" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1617089369622" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/VideoRuanChuang$BlurTest_isBlur.ic" NAME="BlurTest.isBlur Coverage Results" MODIFIED="1617011582281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.zhaoss.weixinrecordeddemo.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/VideoRuanChuang$BlurTest_isBlur__1_.ic" NAME="BlurTest.isBlur (1) Coverage Results" MODIFIED="1617032698101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.zhaoss.weixinrecordeddemo.*</FILTER>
+    </SUITE>
+  </component>
+</project>

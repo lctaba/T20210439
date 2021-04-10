@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :com.coloros.ocs.base-release-1.0.4-SNAPSHOT:@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../gradle/.gradle/caches/transforms-2/files-2.1/497de4747446e8dc64bcb9ea67d7817f/com.coloros.ocs.base-release-1.0.4-SNAPSHOT/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../gradle/.gradle/caches/transforms-2/files-2.1/497de4747446e8dc64bcb9ea67d7817f/com.coloros.ocs.base-release-1.0.4-SNAPSHOT/res" />
+      <root url="file://$PROJECT_DIR$/../../../gradle/.gradle/caches/transforms-2/files-2.1/497de4747446e8dc64bcb9ea67d7817f/com.coloros.ocs.base-release-1.0.4-SNAPSHOT/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,536 @@
+Index: app/src/main/java/com/zhaoss/weixinrecordeddemo/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.zhaoss.weixinrecordeddemo;\r\n\r\nimport android.Manifest;\r\nimport android.content.Intent;\r\nimport android.graphics.BitmapFactory;\r\nimport android.media.MediaPlayer;\r\nimport android.os.Bundle;\r\nimport android.support.annotation.NonNull;\r\nimport android.support.annotation.Nullable;\r\nimport android.support.v7.app.AppCompatActivity;\r\nimport android.view.Surface;\r\nimport android.view.TextureView;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.view.WindowManager;\r\nimport android.widget.ImageView;\r\nimport android.widget.TextView;\r\n\r\nimport com.yanzhenjie.permission.AndPermission;\r\nimport com.yanzhenjie.permission.PermissionListener;\r\nimport com.zhaoss.weixinrecorded.activity.RecordedActivity;\r\n\r\nimport java.util.List;\r\n\r\npublic class MainActivity extends AppCompatActivity {\r\n\r\n    private TextView tv_path;\r\n    private TextureView textureView;\r\n    private MediaPlayer mMediaPlayer;\r\n    private ImageView iv_photo;\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);\r\n        setContentView(R.layout.activity_main);\r\n\r\n        AndPermission.with(this).permission(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE)\r\n                .requestCode(0).callback(new PermissionListener() {\r\n            @Override\r\n            public void onSucceed(int requestCode, @NonNull List<String> grantPermissions) {\r\n            }\r\n            @Override\r\n            public void onFailed(int requestCode, @NonNull List<String> deniedPermissions) {\r\n            }\r\n        }).start();\r\n\r\n        tv_path = findViewById(R.id.tv_path);\r\n        textureView = findViewById(R.id.textureView);\r\n        iv_photo = findViewById(R.id.iv_photo);\r\n    }\r\n\r\n    public void startRecord(View v){\r\n        Intent intent = new Intent(this, RecordedActivity.class);\r\n        startActivityForResult(intent, 1);\r\n\r\n        if(mMediaPlayer != null){\r\n            mMediaPlayer.stop();\r\n            mMediaPlayer.release();\r\n            mMediaPlayer = null;\r\n        }\r\n    }\r\n\r\n    @Override\r\n    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {\r\n        super.onActivityResult(requestCode, resultCode, data);\r\n\r\n        if(resultCode==RESULT_OK && data!=null){\r\n            if(requestCode == 1){\r\n                textureView.setVisibility(View.GONE);\r\n                iv_photo.setVisibility(View.GONE);\r\n                int dataType = data.getIntExtra(RecordedActivity.INTENT_DATA_TYPE, RecordedActivity.RESULT_TYPE_VIDEO);\r\n                if(dataType == RecordedActivity.RESULT_TYPE_VIDEO){\r\n                    String videoPath = data.getStringExtra(RecordedActivity.INTENT_PATH);\r\n                    tv_path.setText(\"视频地址: \"+videoPath);\r\n                    textureView.setVisibility(View.VISIBLE);\r\n                    playVideo(videoPath);\r\n                }else if(dataType == RecordedActivity.RESULT_TYPE_PHOTO){\r\n                    String photoPath = data.getStringExtra(RecordedActivity.INTENT_PATH);\r\n                    tv_path.setText(\"图片地址: \"+photoPath);\r\n                    iv_photo.setVisibility(View.VISIBLE);\r\n                    iv_photo.setImageBitmap(BitmapFactory.decodeFile(photoPath));\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    private void playVideo(String videoPath){\r\n\r\n        try {\r\n            mMediaPlayer = new MediaPlayer();\r\n            mMediaPlayer.setDataSource(videoPath);\r\n            mMediaPlayer.setSurface(new Surface(textureView.getSurfaceTexture()));\r\n            mMediaPlayer.setLooping(true);\r\n            mMediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {\r\n                @Override\r\n                public void onPrepared(MediaPlayer mp) {\r\n                    mp.start();\r\n\r\n                    float ratio = mp.getVideoWidth()*1f/mp.getVideoHeight();\r\n                    int width = textureView.getWidth();\r\n                    ViewGroup.LayoutParams layoutParams = textureView.getLayoutParams();\r\n                    layoutParams.height = (int) (width/ratio);\r\n                    textureView.setLayoutParams(layoutParams);\r\n                }\r\n            });\r\n            mMediaPlayer.prepareAsync();\r\n        }catch (Exception e){\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/zhaoss/weixinrecordeddemo/MainActivity.java	(revision 0d8e9805d16f53ba00f03dc45dd47126aebb21d3)
++++ app/src/main/java/com/zhaoss/weixinrecordeddemo/MainActivity.java	(date 1616985943669)
+@@ -1,33 +1,29 @@
+ package com.zhaoss.weixinrecordeddemo;
+ 
+-import android.Manifest;
++import android.app.AlertDialog;
++import android.content.DialogInterface;
+ import android.content.Intent;
+-import android.graphics.BitmapFactory;
+ import android.media.MediaPlayer;
+ import android.os.Bundle;
+-import android.support.annotation.NonNull;
+-import android.support.annotation.Nullable;
+ import android.support.v7.app.AppCompatActivity;
+-import android.view.Surface;
+ import android.view.TextureView;
+ import android.view.View;
+-import android.view.ViewGroup;
+ import android.view.WindowManager;
+-import android.widget.ImageView;
++import android.widget.Button;
++import android.widget.EditText;
+ import android.widget.TextView;
+ 
+-import com.yanzhenjie.permission.AndPermission;
+-import com.yanzhenjie.permission.PermissionListener;
+ import com.zhaoss.weixinrecorded.activity.RecordedActivity;
+-
+-import java.util.List;
++import com.zhaoss.weixinrecorded.activity.SelectActivity;
+ 
+ public class MainActivity extends AppCompatActivity {
+ 
++
++
+     private TextView tv_path;
+     private TextureView textureView;
+     private MediaPlayer mMediaPlayer;
+-    private ImageView iv_photo;
++
+ 
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+@@ -35,78 +31,47 @@
+         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+         setContentView(R.layout.activity_main);
+ 
+-        AndPermission.with(this).permission(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+-                .requestCode(0).callback(new PermissionListener() {
++        Button button_add = findViewById(R.id.button3);
++        Button button_select = findViewById(R.id.button4);
++
++
++        button_add.setOnClickListener(new View.OnClickListener() {
+             @Override
+-            public void onSucceed(int requestCode, @NonNull List<String> grantPermissions) {
+-            }
+-            @Override
+-            public void onFailed(int requestCode, @NonNull List<String> deniedPermissions) {
+-            }
+-        }).start();
+-
+-        tv_path = findViewById(R.id.tv_path);
+-        textureView = findViewById(R.id.textureView);
+-        iv_photo = findViewById(R.id.iv_photo);
+-    }
++            public void onClick(View v) {
++                //显示输入文件名的提示框
++                final EditText inputServer = new EditText(MainActivity.this);
++
++                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
++
++                builder.setTitle("输入文件名").setIcon(android.R.drawable.ic_dialog_info).setView(inputServer)
++                        .setNegativeButton("取消", new DialogInterface.OnClickListener() {
++                            @Override
++                            public void onClick(DialogInterface dialog, int which) {
++                                dialog.dismiss();
++                            }
++                        });
++                builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
++                    public void onClick(DialogInterface dialog, int which) {
++                       String text = inputServer.getText().toString();
++                        //界面跳转
++                        Intent intent = new Intent(MainActivity.this, RecordedActivity.class);
++                        intent.putExtra("fileName", text);
++                        startActivity(intent);
++                    }
+ 
+-    public void startRecord(View v){
+-        Intent intent = new Intent(this, RecordedActivity.class);
+-        startActivityForResult(intent, 1);
+-
+-        if(mMediaPlayer != null){
+-            mMediaPlayer.stop();
+-            mMediaPlayer.release();
+-            mMediaPlayer = null;
+-        }
+-    }
++                    ;
++                });
++                builder.show();
++            }
++        });
+ 
+-    @Override
+-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+-        super.onActivityResult(requestCode, resultCode, data);
+-
+-        if(resultCode==RESULT_OK && data!=null){
+-            if(requestCode == 1){
+-                textureView.setVisibility(View.GONE);
+-                iv_photo.setVisibility(View.GONE);
+-                int dataType = data.getIntExtra(RecordedActivity.INTENT_DATA_TYPE, RecordedActivity.RESULT_TYPE_VIDEO);
+-                if(dataType == RecordedActivity.RESULT_TYPE_VIDEO){
+-                    String videoPath = data.getStringExtra(RecordedActivity.INTENT_PATH);
+-                    tv_path.setText("视频地址: "+videoPath);
+-                    textureView.setVisibility(View.VISIBLE);
+-                    playVideo(videoPath);
+-                }else if(dataType == RecordedActivity.RESULT_TYPE_PHOTO){
+-                    String photoPath = data.getStringExtra(RecordedActivity.INTENT_PATH);
+-                    tv_path.setText("图片地址: "+photoPath);
+-                    iv_photo.setVisibility(View.VISIBLE);
+-                    iv_photo.setImageBitmap(BitmapFactory.decodeFile(photoPath));
+-                }
+-            }
+-        }
+-    }
+-
+-    private void playVideo(String videoPath){
+-
+-        try {
+-            mMediaPlayer = new MediaPlayer();
+-            mMediaPlayer.setDataSource(videoPath);
+-            mMediaPlayer.setSurface(new Surface(textureView.getSurfaceTexture()));
+-            mMediaPlayer.setLooping(true);
+-            mMediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+-                @Override
+-                public void onPrepared(MediaPlayer mp) {
+-                    mp.start();
+-
+-                    float ratio = mp.getVideoWidth()*1f/mp.getVideoHeight();
+-                    int width = textureView.getWidth();
+-                    ViewGroup.LayoutParams layoutParams = textureView.getLayoutParams();
+-                    layoutParams.height = (int) (width/ratio);
+-                    textureView.setLayoutParams(layoutParams);
+-                }
+-            });
+-            mMediaPlayer.prepareAsync();
+-        }catch (Exception e){
+-            e.printStackTrace();
+-        }
++        button_select.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                Intent intent = new Intent(MainActivity.this, SelectActivity.class);
++                startActivity(intent);
++            }
++        });
++
+     }
+ }
+\ No newline at end of file
+Index: .idea/encodings.xml
+===================================================================
+--- .idea/encodings.xml	(revision 0d8e9805d16f53ba00f03dc45dd47126aebb21d3)
++++ .idea/encodings.xml	(revision 0d8e9805d16f53ba00f03dc45dd47126aebb21d3)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+-    <file url="PROJECT" charset="UTF-8" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/codeStyles/Project.xml
+===================================================================
+--- .idea/codeStyles/Project.xml	(revision 0d8e9805d16f53ba00f03dc45dd47126aebb21d3)
++++ .idea/codeStyles/Project.xml	(revision 0d8e9805d16f53ba00f03dc45dd47126aebb21d3)
+@@ -1,116 +0,0 @@
+-<component name="ProjectCodeStyleConfiguration">
+-  <code_scheme name="Project" version="173">
+-    <codeStyleSettings language="XML">
+-      <indentOptions>
+-        <option name="CONTINUATION_INDENT_SIZE" value="4" />
+-      </indentOptions>
+-      <arrangement>
+-        <rules>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>xmlns:android</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>xmlns:.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*:id</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*:name</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>name</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>style</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>ANDROID_ATTRIBUTE_ORDER</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>.*</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-        </rules>
+-      </arrangement>
+-    </codeStyleSettings>
+-  </code_scheme>
+-</component>
+\ No newline at end of file
+Index: .idea/runConfigurations.xml
+===================================================================
+--- .idea/runConfigurations.xml	(revision 0d8e9805d16f53ba00f03dc45dd47126aebb21d3)
++++ .idea/runConfigurations.xml	(revision 0d8e9805d16f53ba00f03dc45dd47126aebb21d3)
+@@ -1,12 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="RunConfigurationProducerService">
+-    <option name="ignoredProducers">
+-      <set>
+-        <option value="org.jetbrains.plugins.gradle.execution.test.runner.AllInPackageGradleConfigurationProducer" />
+-        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestClassGradleConfigurationProducer" />
+-        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestMethodGradleConfigurationProducer" />
+-      </set>
+-    </option>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/dictionaries/zhaoshuang.xml
+===================================================================
+--- .idea/dictionaries/zhaoshuang.xml	(revision 0d8e9805d16f53ba00f03dc45dd47126aebb21d3)
++++ .idea/dictionaries/zhaoshuang.xml	(revision 0d8e9805d16f53ba00f03dc45dd47126aebb21d3)
+@@ -1,3 +0,0 @@
+-<component name="ProjectDictionaryState">
+-  <dictionary name="zhaoshuang" />
+-</component>
+\ No newline at end of file
+Index: .idea/.gitignore
+===================================================================
+--- .idea/.gitignore	(revision 0d8e9805d16f53ba00f03dc45dd47126aebb21d3)
++++ .idea/.gitignore	(revision 0d8e9805d16f53ba00f03dc45dd47126aebb21d3)
+@@ -1,3 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+Index: .idea/inspectionProfiles/Project_Default.xml
+===================================================================
+--- .idea/inspectionProfiles/Project_Default.xml	(revision 0d8e9805d16f53ba00f03dc45dd47126aebb21d3)
++++ .idea/inspectionProfiles/Project_Default.xml	(revision 0d8e9805d16f53ba00f03dc45dd47126aebb21d3)
+@@ -1,5 +0,0 @@
+-<component name="InspectionProjectProfileManager">
+-  <profile version="1.0">
+-    <option name="myName" value="Project Default" />
+-  </profile>
+-</component>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout\r\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\">\r\n\r\n    <Button\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"开始录像\"\r\n        android:onClick=\"startRecord\"/>\r\n    <TextView\r\n        android:id=\"@+id/tv_path\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:textSize=\"14sp\"\r\n        android:layout_marginTop=\"50dp\"\r\n        android:textColor=\"#313133\"/>\r\n    <TextureView\r\n        android:id=\"@+id/textureView\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:layout_below=\"@id/tv_path\"\r\n        android:layout_margin=\"20dp\"/>\r\n    <ImageView\r\n        android:id=\"@+id/iv_photo\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:layout_below=\"@id/tv_path\"\r\n        android:layout_margin=\"20dp\"/>\r\n\r\n</RelativeLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision 0d8e9805d16f53ba00f03dc45dd47126aebb21d3)
++++ app/src/main/res/layout/activity_main.xml	(date 1616985943684)
+@@ -1,33 +1,37 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<RelativeLayout
+-    xmlns:android="http://schemas.android.com/apk/res/android"
++<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical">
+ 
++    <android.support.constraint.Guideline
++        android:id="@+id/guideline"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:orientation="vertical"
++        app:layout_constraintGuide_percent="0.5" />
++
+     <Button
+-        android:layout_width="match_parent"
++        android:id="@+id/button3"
++        android:layout_width="0dp"
+         android:layout_height="wrap_content"
+-        android:text="开始录像"
+-        android:onClick="startRecord"/>
+-    <TextView
+-        android:id="@+id/tv_path"
+-        android:layout_width="match_parent"
++        android:background="@drawable/color3"
++        android:text="创建"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toStartOf="@+id/guideline"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <Button
++        android:id="@+id/button4"
++        android:layout_width="0dp"
+         android:layout_height="wrap_content"
+-        android:textSize="14sp"
+-        android:layout_marginTop="50dp"
+-        android:textColor="#313133"/>
+-    <TextureView
+-        android:id="@+id/textureView"
+-        android:layout_width="match_parent"
+-        android:layout_height="match_parent"
+-        android:layout_below="@id/tv_path"
+-        android:layout_margin="20dp"/>
+-    <ImageView
+-        android:id="@+id/iv_photo"
+-        android:layout_width="match_parent"
+-        android:layout_height="match_parent"
+-        android:layout_below="@id/tv_path"
+-        android:layout_margin="20dp"/>
+-
+-</RelativeLayout>
+\ No newline at end of file
++        android:background="@drawable/color3"
++        android:text="选择"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="@+id/guideline"
++        app:layout_constraintTop_toTopOf="parent" />
++</android.support.constraint.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">WeiXinRecordedDemo</string>\r\n</resources>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(revision 0d8e9805d16f53ba00f03dc45dd47126aebb21d3)
++++ app/src/main/res/values/strings.xml	(date 1616985943684)
+@@ -1,3 +1,3 @@
+ <resources>
+-    <string name="app_name">WeiXinRecordedDemo</string>
++    <string name="app_name">RuanChuang</string>
+ </resources>
+Index: .idea/jarRepositories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"RemoteRepositoriesConfiguration\">\r\n    <remote-repository>\r\n      <option name=\"id\" value=\"central\" />\r\n      <option name=\"name\" value=\"Maven Central repository\" />\r\n      <option name=\"url\" value=\"https://repo1.maven.org/maven2\" />\r\n    </remote-repository>\r\n    <remote-repository>\r\n      <option name=\"id\" value=\"jboss.community\" />\r\n      <option name=\"name\" value=\"JBoss Community repository\" />\r\n      <option name=\"url\" value=\"https://repository.jboss.org/nexus/content/repositories/public/\" />\r\n    </remote-repository>\r\n    <remote-repository>\r\n      <option name=\"id\" value=\"BintrayJCenter\" />\r\n      <option name=\"name\" value=\"BintrayJCenter\" />\r\n      <option name=\"url\" value=\"https://jcenter.bintray.com/\" />\r\n    </remote-repository>\r\n    <remote-repository>\r\n      <option name=\"id\" value=\"Google\" />\r\n      <option name=\"name\" value=\"Google\" />\r\n      <option name=\"url\" value=\"https://dl.google.com/dl/android/maven2/\" />\r\n    </remote-repository>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/jarRepositories.xml	(revision 0d8e9805d16f53ba00f03dc45dd47126aebb21d3)
++++ .idea/jarRepositories.xml	(date 1616986933464)
+@@ -21,5 +21,30 @@
+       <option name="name" value="Google" />
+       <option name="url" value="https://dl.google.com/dl/android/maven2/" />
+     </remote-repository>
++    <remote-repository>
++      <option name="id" value="maven3" />
++      <option name="name" value="maven3" />
++      <option name="url" value="https://maven.aliyun.com/repository/jcenter/" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="MavenRepo" />
++      <option name="name" value="MavenRepo" />
++      <option name="url" value="https://repo.maven.apache.org/maven2/" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="maven" />
++      <option name="name" value="maven" />
++      <option name="url" value="https://maven.aliyun.com/repository/public/" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="maven2" />
++      <option name="name" value="maven2" />
++      <option name="url" value="https://maven.aliyun.com/repository/google/" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="MavenLocal" />
++      <option name="name" value="MavenLocal" />
++      <option name="url" value="file:/$PROJECT_DIR$/../../../maven_repository/" />
++    </remote-repository>
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectModuleManager\">\r\n    <modules>\r\n      <module fileurl=\"file://$PROJECT_DIR$/.idea/modules/WeiXinRecordedDemo-master.iml\" filepath=\"$PROJECT_DIR$/.idea/modules/WeiXinRecordedDemo-master.iml\" />\r\n      <module fileurl=\"file://$PROJECT_DIR$/.idea/modules/app/WeiXinRecordedDemo-master.app.iml\" filepath=\"$PROJECT_DIR$/.idea/modules/app/WeiXinRecordedDemo-master.app.iml\" />\r\n      <module fileurl=\"file://$PROJECT_DIR$/.idea/modules/weiXinRecorded/WeiXinRecordedDemo-master.weixinrecorded.iml\" filepath=\"$PROJECT_DIR$/.idea/modules/weiXinRecorded/WeiXinRecordedDemo-master.weixinrecorded.iml\" />\r\n    </modules>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(revision 0d8e9805d16f53ba00f03dc45dd47126aebb21d3)
++++ .idea/modules.xml	(date 1616986626313)
+@@ -2,9 +2,9 @@
+ <project version="4">
+   <component name="ProjectModuleManager">
+     <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WeiXinRecordedDemo-master.iml" filepath="$PROJECT_DIR$/.idea/modules/WeiXinRecordedDemo-master.iml" />
+-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/WeiXinRecordedDemo-master.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/WeiXinRecordedDemo-master.app.iml" />
+-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weiXinRecorded/WeiXinRecordedDemo-master.weixinrecorded.iml" filepath="$PROJECT_DIR$/.idea/modules/weiXinRecorded/WeiXinRecordedDemo-master.weixinrecorded.iml" />
++      <module fileurl="file://$PROJECT_DIR$/.idea/modules/VideoRuanChuang.iml" filepath="$PROJECT_DIR$/.idea/modules/VideoRuanChuang.iml" />
++      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/VideoRuanChuang.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/VideoRuanChuang.app.iml" />
++      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weiXinRecorded/VideoRuanChuang.weixinrecorded.iml" filepath="$PROJECT_DIR$/.idea/modules/weiXinRecorded/VideoRuanChuang.weixinrecorded.iml" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"VcsDirectoryMappings\">\r\n    <mapping directory=\"$PROJECT_DIR$\" vcs=\"Git\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(revision 0d8e9805d16f53ba00f03dc45dd47126aebb21d3)
++++ .idea/vcs.xml	(date 1616986626188)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++    <mapping directory="" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    package=\"com.zhaoss.weixinrecordeddemo\">\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/AppTheme\">\r\n        <activity android:name=\".MainActivity\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision 0d8e9805d16f53ba00f03dc45dd47126aebb21d3)
++++ app/src/main/AndroidManifest.xml	(date 1616985943653)
+@@ -1,5 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools"
+     package="com.zhaoss.weixinrecordeddemo">
+ 
+     <application

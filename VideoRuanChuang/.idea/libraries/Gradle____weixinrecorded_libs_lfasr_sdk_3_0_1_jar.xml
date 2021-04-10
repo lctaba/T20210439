@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./weixinrecorded/libs/lfasr-sdk-3.0.1.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/weiXinRecorded/libs/lfasr-sdk-3.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

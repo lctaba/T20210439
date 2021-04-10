@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :CVUnit-release:@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../gradle/.gradle/caches/transforms-2/files-2.1/e3265a357614d0e7c6ad499ecc48f7d7/CVUnit-release/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../gradle/.gradle/caches/transforms-2/files-2.1/e3265a357614d0e7c6ad499ecc48f7d7/CVUnit-release/res" />
+      <root url="file://$PROJECT_DIR$/../../../gradle/.gradle/caches/transforms-2/files-2.1/e3265a357614d0e7c6ad499ecc48f7d7/CVUnit-release/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

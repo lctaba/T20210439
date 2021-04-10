@@ -1,0 +1,15 @@
+server:
+  port: 54932
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:54931/eureka/
+    fetch-registry: true
+    registry-fetch-interval-seconds: 8
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 4
+    lease-expiration-duration-in-seconds: 12
+    status-page-url-path: /info
+    health-check-url-path: /health

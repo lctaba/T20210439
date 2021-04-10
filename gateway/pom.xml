@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.9.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.horsecoder</groupId>
+    <artifactId>gateway</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>horsecoder-gateway</name>
+    <description>服务网关</description>
+
+    <modules>
+        <module>gateway-core</module>
+        <module>gateway-test</module>
+        <module>gateway-starter</module>
+        <module>gateway-integration</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
+
+        <gateway-core-version>1.0.0</gateway-core-version>
+        <gateway-starter-version>1.0.0</gateway-starter-version>
+        <gateway-integration-version>1.0.0</gateway-integration-version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>com.horsecoder</groupId>
+                <artifactId>gateway-core</artifactId>
+                <version>${gateway-core-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.horsecoder</groupId>
+                <artifactId>gateway-starter</artifactId>
+                <version>${gateway-starter-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.horsecoder</groupId>
+                <artifactId>gateway-integration</artifactId>
+                <version>${gateway-integration-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>releases</name>
+            <url>http://central.horsecoder.com:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>snapshots</name>
+            <url>http://central.horsecoder.com:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>releases</id>
+            <name>releases</name>
+            <url>http://central.horsecoder.com:8081/repository/maven-releases/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+        </repository>
+    </repositories>
+
+</project>
